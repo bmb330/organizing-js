@@ -11,5 +11,14 @@ $(document).ready(function(){
 	// (aka "event delegation"), by attaching a single event
 	// handler the `$content` element rather than individual
 	// event handlers to each item in the carousel.
+	
+	function loadPerson(evt) {
+	  var ID = $(evt.target).attr('rel').replace(/^.*(\d+)$/, '$1');
+	  $.ajax('details/'+ID+'.html').then(function(contents) {
+	    $content.html(contents);
+	  });
+	}
+	
+	$items.on('click', '[rel*="js-item-"]', loadPerson);
 
 });

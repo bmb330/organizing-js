@@ -38,5 +38,8 @@ $(document).ready(function(){
 	// attach click handlers for the `$left` and `$right` buttons,
 	// that call the `scrollLeft(..)` and `scrollRight(..)` functions,
 	// respectively
+	
+	$left.on('click', scrollLeft);
+	$right.on('click', scrollRight);
 
 });
