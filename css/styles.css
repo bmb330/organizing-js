@@ -1,0 +1,173 @@
+html, body {
+	padding: 0px;
+	margin: 0px;
+	font-size: 1.2em;
+	background-color: #e6e6e6;
+}
+
+#page {
+	position: relative;
+	margin: 5px auto;
+	width: 95%;
+	min-width: 700px;
+	max-width: 1000px;
+}
+
+header {
+	position: relative;
+	height: 80px;
+	background-color: #857ed9;
+}
+
+header > .logo {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 2.2em;
+	color: #fff;
+}
+
+header > .controls {
+	position: absolute;
+	right: 15px;
+	bottom: 5%;
+	font-size: 0.7em;
+	color: #000;
+}
+
+header > .controls > a {
+	color: #ccc;
+	text-decoration: none;
+}
+
+#carousel {
+	box-sizing: border-box;
+	position: absolute;
+	top: 100px;
+	width: 50%;
+	height: 290px;
+	padding: 20px;
+	background-color: #bcd1ab;
+}
+
+#carousel > .content {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#carousel > .content > .items {
+	position: absolute;
+	white-space: nowrap;
+	left: 0px;
+	transition: left 0.5s ease-out;
+	overflow: hidden;
+}
+
+#carousel > .content > .items > .item {
+	display: inline-block;
+	position: relative;
+	width: 135px;
+	height: 200px;
+	margin-right: 50px;
+	overflow: hidden;
+	cursor: pointer;
+	background-image: url(../images/carousel.jpg);
+	background-repeat: no-repeat;
+}
+
+#carousel > .content > .items > .item:last-child {
+	margin-right: 0px;
+}
+
+#carousel > .controls {
+	position: relative;
+	bottom: -55px;
+	width: 100%;
+}
+
+#carousel > .controls > button {
+	position: absolute;
+	font-size: 1.5em;
+	bottom: 0px;
+}
+
+#carousel > .controls > .left {
+	left: 0px;
+}
+
+#carousel > .controls > .right {
+	right: 0px;
+}
+
+#details {
+	box-sizing: border-box;
+	position: absolute;
+	top: 100px;
+	right: 0px;
+	width: 45%;
+	height: 500px;
+	padding: 20px;
+	background-color: #a2cde8;
+}
+
+#details > .content {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	background-color: #c3e3f7;
+	overflow-y: scroll;
+}
+
+#details > .content > h1:first-child {
+	margin-top: 0px;
+}
+
+#details > .content > .portrait {
+	width: 135px;
+	height: 200px;
+	overflow: hidden;
+	background-image: url(../images/carousel.jpg);
+	background-repeat: no-repeat;
+}
+
+.person1 {
+	background-position: 0px 0px;
+}
+
+.person2 {
+	background-position: -142px 0px;
+}
+
+.person3 {
+	background-position: -284px 0px;
+}
+
+.person4 {
+	background-position: 0px -225px;
+}
+
+.person5 {
+	background-position: -142px -225px;
+}
+
+.person6 {
+	background-position: -284px -225px;
+}
+
+#modal {
+	position: absolute;
+	display: none;
+	width: 500px;
+	height: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #fff;
+	border: 3px solid #c69;
+}
