@@ -171,3 +171,10 @@ header > .controls > a {
 	background-color: #fff;
 	border: 3px solid #c69;
 }
+
+#modal > .close {
+  float: right;
+  padding: .4rem .6rem;
+  font-family: sans-serif;
+  cursor: pointer;
+}

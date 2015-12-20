@@ -26,7 +26,8 @@ var Carousel = (function() {
 
   function clickPerson(evt) {
     var ID = $(evt.target).attr('rel').replace(/^.*(\d+)$/, '$1');
-    Details.loadPerson(ID);
+
+    EVT.emit('person-selected', ID);
   }
 
   // attach click handlers for the `$left` and `$right` buttons,
@@ -57,6 +58,8 @@ var Carousel = (function() {
     itemsWidth,
     position,
     maxPosition;
+
+  EVT.on('init', init);
 
   return {
     init: init

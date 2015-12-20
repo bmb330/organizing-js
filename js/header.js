@@ -11,17 +11,30 @@ var Header = (function() {
 
     $.ajax(url, { dataType: 'text' })
     .then(function(content) {
-      $modal.html(content).show();
+      $modal.find('[rel="js-content"]').html(content);
+      $modal.show();
+
+      $('[rel="js-register"], [rel="js-login"]').on('click', function() {
+        EVT.emit('close-modal');
+      });
     });
+  }
+
+  function closeModal() {
+    $modal.hide();
   }
 
   function init() {
     $modal = $('[rel="js-modal"]');
+    $modal.on('click', '[rel="js-close"]', closeModal);
 
     $('[rel="js-controls"]').on('click', '[rel*="js-"]', headerLinkClicks);
   }
 
   var $modal;
+
+  EVT.on('init', init);
+  EVT.on('close-modal', closeModal);
 
   return {
     init: init
